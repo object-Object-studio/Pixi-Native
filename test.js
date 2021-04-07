@@ -1,17 +1,30 @@
-module.exports = () => `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-    body {
-        margin-top: 3em;
+module.exports = (
+    {
+        src
     }
-</style>
-</head>
-<body>
-    aslkjdakjdjak ldljksadljñk sañkl
-</body>
-</html>
+) => `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        iframe {
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            border: 0;
+        }   
+    </style>
+    </head>
+    <body>
+        <iframe
+            src="${src}"
+        ></iframe>
+    </body>
+    </html>
 `;
